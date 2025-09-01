@@ -20,7 +20,6 @@ Repository Structure
 │   ├── charts/                      # Generated visualizations
 │   ├── academic_outputs/            # Academic tables and figures
 │   ├── robustness_analysis/         # Robustness test results
-│   └── SP500_综合研究报告.md        # Comprehensive research report
 ├── docs/                            # Documentation
 │   ├── methodology.md              # Detailed methodology
 │   ├── data_dictionary.md          # Variable definitions
@@ -41,8 +40,8 @@ Installation Steps
 
 Clone the repository
 
-bashgit clone https://github.com/[YourUsername]/sp500-asset-pricing-research.git
-cd sp500-asset-pricing-research
+bashgit clone https://github.com/Jy1116/Dissertation .git
+cd Dissertation 
 
 Create virtual environment
 
@@ -56,9 +55,27 @@ bashpip install -r requirements.txt
 Set up API keys (optional for real data)
 Create a .env file in the root directory:
 
-bashALPHA_VANTAGE_API_KEY=your_api_key_here
-NEWS_API_KEY=your_api_key_here
-GNEWS_API_KEY=your_api_key_here
+# === API KEYS ===
+FRED_API_KEY=a61859d2543c59dc9f7884919ae899e7
+AALPHA_VANTAGE_KEY=XSKT3LI8Q7GDYHPS
+NEWS_API_KEY=80f5c841bcd841899a22a24f88cce246
+TWITTER_BEARER_TOKEN=AAAAAAAAAAAAAAAAAAAAAH9W3gEAAAAA2OvVapq5Wh8wCOlHUhwVX%2BXaQ%2FQ%3D8C17NsjPnPgM2gYBO98fonw0Y720AVaBrNKjWgtpArodvYLZC7
+REDDIT_CLIENT_ID=True-Poetry-5033
+REDDIT_CLIENT_SECRET=yjy20021116
+REDDIT_USER_AGENT=dissertation-bot/0.1
+# News API Keys 
+NEWS_API_KEY=80f5c841bcd841899a22a24f88cce246
+GNEWS_API_KEY=14d396dfaec486a7d7dfb65e76af5e5d
+# === DB CONNECTIONS ===
+MONGO_URI=mongodb://localhost:27017
+REDIS_URL=redis://localhost:6379/0
+POSTGRES_URI=postgresql://user:pass@localhost:5432/dissertation
+DATABASE_URL=sqlite:///asset_pricing.db
+REDIS_URL=redis://localhost:6379/0
+# === OTHER ===
+TZ=Europe/London
+RANDOM_SEED=42
+
 Quick Start
 Basic Usage
 bashpython main.py
@@ -135,7 +152,6 @@ Comprehensive dashboard
 
 Research Reports
 
-Chinese Report: SP500_综合研究报告.md
 English Report: SP500_Research_Report_EN.md
 Robustness Analysis: Complete multi-dimensional validation report
 
@@ -228,10 +244,10 @@ Citation
 If you use this code in your research, please cite:
 bibtex@misc{sp500_asset_pricing_2024,
   title={S\&P 500 Asset Pricing Optimization: Integration of Traditional Factors and Alternative Sentiment Data},
-  author={[Your Name]},
-  year={2024},
+  author={[Jingyu Yang]},
+  year={2025},
   howpublished={GitHub repository},
-  url={https://github.com/[YourUsername]/sp500-asset-pricing-research},
+  url={https://github.com/[Jy1116]/dissertation },
   doi={10.5281/zenodo.XXXXXXX}
 }
 License
@@ -247,11 +263,11 @@ Support and Contact
 
 Issues: Please report bugs and feature requests through GitHub Issues
 Discussions: Join community discussions in GitHub Discussions
-Email: [your.email@institution.edu] for collaboration inquiries
+Email: [ucesjy8@ucl.ac.uk] for collaboration inquiries
 
 Disclaimer
 This research framework is for academic and educational purposes only. It should not be used as the sole basis for investment decisions. Past performance does not guarantee future results. Please consult with financial professionals before making investment decisions.
 
-Last Updated: December 2024
+Last Updated: August 2025
 Version: 1.0.0
 Python Compatibility: 3.8+
